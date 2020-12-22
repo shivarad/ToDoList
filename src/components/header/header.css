@@ -1,0 +1,31 @@
+.header{
+    display: flex;
+    background-image: url("../../asset/images/bg-desktop-light.jpg");
+    height:40vh ;
+    justify-content: center;
+   }
+   .dark-hdr{
+    background-image: url("../../asset/images/bg-desktop-dark.jpg");
+  
+   }
+   .wrapper{
+     display: flex;
+     flex-direction: column;
+     width: 50vw;
+     justify-content: center;
+     
+   }
+  .mode-container{
+    width: 50vw;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-txt{
+    color: white;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+  }
+  
+ 

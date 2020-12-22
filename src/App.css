@@ -1,37 +1,8 @@
 
- .header{
-  display: flex;
-  background-image: url("asset/images/bg-desktop-light.jpg");
-  height:33vh ;
-  justify-content: center;
- }
- .dark-hdr{
-  background-image: url("asset/images/bg-desktop-dark.jpg");
-
- }
-.container{
-  width: 50vw;
-  height: fit-content;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-.header-txt{
-  color: white;
-  font-family: 'Josefin Sans';
-  font-weight: 700;
-}
-
-.mode-btn{
-  background-color: transparent;
-  border: none;
-  outline: none !important;
-  
-}
 .body{
   background-color:  hsl(236, 33%, 92%);
-  height: 67vh;
+  height: 60vh;
 }
 .dark-body{
-  background-color:  hsl(233, 14%, 35%);
+  background-color:  hsl(235, 21%, 11%);
 }
