@@ -1,7 +1,9 @@
 
 .body{
-  background-color:  hsl(236, 33%, 92%);
+  background-color:  #fafafa;
   height: 60vh;
+  display: flex;
+  justify-content: center;
 }
 .dark-body{
   background-color:  hsl(235, 21%, 11%);
