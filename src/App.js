@@ -22,7 +22,8 @@ class App extends React.Component{
    <div className="main-container">
      <Header isDarkMode={darkMode} ChangeMode={ChangeMode}></Header>
      <div className={`${darkMode? 'dark-body' :''} body` }>
-          <List></List>
+          <List/>
+          <div className="info-text">Drag and drop to reorder list</div>
      </div>
    </div>
   );

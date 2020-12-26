@@ -1,4 +1,5 @@
 import Item from '../item/item';
+import TabBar from '../tab-bar/tab-bar'
 import './list.css'
 
 const List=({items})=>(
@@ -12,6 +13,7 @@ const List=({items})=>(
         <Item>
 
         </Item>
+        <TabBar></TabBar>
     </div>
 )
 

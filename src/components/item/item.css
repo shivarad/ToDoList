@@ -5,9 +5,18 @@
     border-bottom: 1px solid #e7e6e7;
     font-family: 'Josefin Sans';
     font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    color: hsl(235, 19%, 35%);
 }
 
-.item:first-child{
+.dark-item{
+    background-color: #25273c;
+    color :hsl(233, 31%, 79%);
+    border-bottom: 1px solid  hsl(233, 14%, 35%);
+
+}
+.item:first-child , .dark-item:first-child{
     border-radius: 5px 5px 0 0 ;
 
 }
@@ -26,10 +35,16 @@
     top:20%;
     cursor: pointer;
     margin-left: 15px;
-}
-.item-circle:checked{
-    background-image: linear-gradient(135deg,hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+    text-decoration: line-through;
 
+}
+.dark-item-circle{
+    border: 1px solid  hsl(233, 14%, 35%);
+    background-color: #25273c;
+
+}
+.item-circle:checked {
+    background-image: linear-gradient(135deg,hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
 } 
 
 .checkmark{
@@ -38,6 +53,10 @@
      left: -21px;
      top:3px;
 }
+
+.dark-checkmark{
+    fill:#25273c
+}
 label{
     cursor: pointer;
 
@@ -45,4 +64,21 @@ label{
 .checked{
     text-decoration: line-through;
 
+}
+.removeBtn{
+    background: none;
+    outline: none;
+    border: none;
+    padding: 15px;
+    font-size: 25px;
+    font:  normal 1em/1 Arial, sans-serif;
+    cursor: pointer;
+    display: none;
+}
+
+.dark-removeBtn{
+    color:hsl(233, 14%, 35%);
+}
+.item:hover .removeBtn{
+    display: block;
 }
