@@ -1,17 +1,1 @@
 
-.body{
-  background-color:  #fafafa;
-  height: 60vh;
-}
-.dark-body{
-  background-color:  hsl(235, 21%, 11%);
-}
-
-.info-text{
-  color:  hsl(236, 9%, 61%);
-  margin: 0 auto;
-  width: 50%;
-  font-size:12px;
-  padding-top: 30px;
-  text-align: center;
-}

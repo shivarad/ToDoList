@@ -1,20 +1,22 @@
 import React from 'react';
 import ModeBtn from '../modeButton/modeBtn';
 import TextBox from '../textBox/txtBox';
-import './header.css';
+import {HeaderContainer,CenterWrapper,ModeContainer,HeaderTxt} from './headerStyles';
 
 const Header=({isDarkMode,ChangeMode})=>(
 
     
-    <div className={`${isDarkMode? 'dark-hdr' :''} header` } >
-       <div className='wrapper'>
-         <div className='mode-container'>
-            <h2 className='header-txt'>T O D O</h2>
+   //  <div className={`${isDarkMode? 'dark-hdr' :''} header` } >
+   <HeaderContainer>
+       <CenterWrapper>
+         <ModeContainer>
+            <HeaderTxt>T O D O</HeaderTxt>
             <ModeBtn isDarkMode={isDarkMode} ChangeMode={ChangeMode}/>
-         </div>
+         </ModeContainer>
          <TextBox isDarkMode={isDarkMode}/>
-       </div>
-    </div>
+       </CenterWrapper>
+   </HeaderContainer>
+   //  </div>
        
 
 )

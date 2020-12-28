@@ -1,11 +1,11 @@
-import './txtBox.css';
+import {TextBoxContainer,TextInput,Circle} from './textBoxStyles';
 
-const TextBox =({isDarkMode})=>(
+const TextBox =()=>(
 
-    <span >
-        <input type="radio" disabled className={`${isDarkMode? 'dark-circle' :''} circle` }/>
-        <input placeholder='Create a todo...' className={`${isDarkMode? 'dark-input' :''} input` }/>
-    </span>
+    <TextBoxContainer >
+        <Circle/>
+        <TextInput/>
+    </TextBoxContainer>
 )
 
 export default TextBox;

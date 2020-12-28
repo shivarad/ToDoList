@@ -1,9 +1,9 @@
 import Item from '../item/item';
-import TabBar from '../tab-bar/tab-bar'
-import './list.css'
+import TabBar from '../tab-bar/tabBar'
+import {ListContainer} from './listStyles';
 
 const List=({items})=>(
-    <div className='list'>
+    <ListContainer className='list'>
         <Item>
 
         </Item>
@@ -14,7 +14,7 @@ const List=({items})=>(
 
         </Item>
         <TabBar></TabBar>
-    </div>
+    </ListContainer>
 )
 
 export default List;

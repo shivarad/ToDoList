@@ -1,9 +1,10 @@
-.header{
+
+/* .header{
     display: flex;
     background-image: url("../../asset/images/bg-desktop-light.jpg");
     height:40vh ;
     justify-content: center;
-   }
+   } */
    .dark-hdr{
     background-image: url("../../asset/images/bg-desktop-dark.jpg");
   

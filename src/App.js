@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Header from './components/header/header';
-import List from "./components/list/list";
-//import {Header,Container,HeaderTxt,ModeBtn} from './AppStyles';
+import Body from './components/body/body'
 import './App.css';
 
 class App extends React.Component{
@@ -19,13 +18,10 @@ class App extends React.Component{
       this.setState({darkMode:!this.state.darkMode});
     }
   return (
-   <div className="main-container">
+   <Fragment>
      <Header isDarkMode={darkMode} ChangeMode={ChangeMode}></Header>
-     <div className={`${darkMode? 'dark-body' :''} body` }>
-          <List/>
-          <div className="info-text">Drag and drop to reorder list</div>
-     </div>
-   </div>
+      <Body/>
+   </Fragment>
   );
 }
 }
