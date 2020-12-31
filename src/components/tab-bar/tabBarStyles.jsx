@@ -1,17 +1,15 @@
 import style from 'styled-components';
+import {LightTheme,DarkTheme} from '../../asset/styles/theme';
 
 export const TabBarContainer=style.div`
 padding:0 10px ;
     height: 40px;
-    background-color:white;
-    border-bottom: 1px solid #e7e6e7;
+    background-color:${({ darkMode }) => darkMode?DarkTheme.ItemBackground:LightTheme.ItemBackground};
     font-family: 'Josefin Sans';
     font-size: 18px;
     display: flex;
     justify-content: space-between;
-    &:hover{
-        color: hsl(220, 98%, 61%);
-    }
+    
 `;
 
 export const TabBtn=style.button`

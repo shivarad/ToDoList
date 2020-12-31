@@ -1,11 +1,15 @@
-import sunIcon from "../../asset/images/icon-sun.svg";
-import moonIcon from "../../asset/images/icon-moon.svg";
-import {ModeBtnContainer} from './modeButtonStyles'
-const ModeBtn=({isDarkMode,ChangeMode})=>(
+import {useContext} from 'react';
+import {ModeBtnContainer} from './modeButtonStyles';
+import {ThemeContext} from '../../providers/theme/theme-provider';
+import {LightTheme,DarkTheme} from '../../asset/styles/theme';
 
-
-    <ModeBtnContainer  onClick={ChangeMode} className='mode-btn'><img src={`${isDarkMode? sunIcon:moonIcon}`} alt="mode icon"/></ModeBtnContainer>
-
-)
+const ModeBtn=({...props})=>{
+    const {darkMode}=useContext(ThemeContext);
+    
+return(
+        <ModeBtnContainer  {...props} >
+            <img src={darkMode? DarkTheme.ModeIcon:LightTheme.ModeIcon} alt="mode icon"/>
+        </ModeBtnContainer>
+)}
 
 export default ModeBtn;

@@ -1,24 +1,23 @@
-import React from 'react';
+import {useContext}from 'react';
 import ModeBtn from '../modeButton/modeBtn';
 import TextBox from '../textBox/txtBox';
 import {HeaderContainer,CenterWrapper,ModeContainer,HeaderTxt} from './headerStyles';
+import {ThemeContext} from '../../providers/theme/theme-provider';
 
-const Header=({isDarkMode,ChangeMode})=>(
+const Header=()=>{
+   const {toggleTheme,darkMode}=useContext(ThemeContext);
 
-    
-   //  <div className={`${isDarkMode? 'dark-hdr' :''} header` } >
-   <HeaderContainer>
+   return(
+   <HeaderContainer darkMode={darkMode}>
        <CenterWrapper>
          <ModeContainer>
             <HeaderTxt>T O D O</HeaderTxt>
-            <ModeBtn isDarkMode={isDarkMode} ChangeMode={ChangeMode}/>
+            <ModeBtn onClick={toggleTheme}/>
          </ModeContainer>
-         <TextBox isDarkMode={isDarkMode}/>
+         <TextBox />
        </CenterWrapper>
    </HeaderContainer>
-   //  </div>
-       
 
-)
+)}
 
 export default Header;

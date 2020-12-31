@@ -1,9 +1,10 @@
 
  import style from 'styled-components';
+import {LightTheme,DarkTheme} from '../../asset/styles/theme';
 
  export const BodyContainer=style.div`
- background-color:  #fafafa;
- height: 60vh;
+ background-color: ${({ darkMode }) =>darkMode?DarkTheme.BodyColor:LightTheme.BodyColor};
+ height: 60vh; 
  `;
 
  export const InfoTxt=style.div`

@@ -1,29 +1,21 @@
-import React, { Fragment } from 'react';
+import React, { Fragment,useContext  } from 'react';
 import Header from './components/header/header';
-import Body from './components/body/body'
-import './App.css';
+import Body from './components/body/body';
+import {GlobalStyles} from './asset/styles/global';
+import { ThemeProvider } from 'styled-components';
+import {ThemeContext} from './providers/theme/theme-provider';
 
-class App extends React.Component{
-  constructor(){
-    super();
-    this.state={
-      darkMode: true
-    }
-  }
-  
-  
-  render(){
-    const {darkMode}=this.state;
-    const ChangeMode=()=>{
-      this.setState({darkMode:!this.state.darkMode});
-    }
-  return (
-   <Fragment>
-     <Header isDarkMode={darkMode} ChangeMode={ChangeMode}></Header>
-      <Body/>
-   </Fragment>
-  );
-}
-}
+
+ const App=()=> {
+   const {theme}=useContext(ThemeContext)
+   return(
+    <ThemeProvider theme={theme}>
+      <Fragment>
+          <GlobalStyles/>
+          <Header />
+          <Body/>
+      </Fragment>
+   </ThemeProvider>
+  )};
 
 export default App;

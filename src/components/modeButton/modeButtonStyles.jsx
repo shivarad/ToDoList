@@ -5,3 +5,7 @@ background-color: transparent;
     border: none;
     outline: none !important;
 `;
+
+export const ModeIcon=style.img`
+
+`;

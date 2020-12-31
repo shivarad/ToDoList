@@ -1,10 +1,10 @@
 import style from 'styled-components';
-import bg from '../../asset/images/bg-desktop-light.jpg';
+import {LightTheme,DarkTheme} from '../../asset/styles/theme';
 
 export const HeaderContainer =style.div`
 
 display: flex;
-background-image: url(${bg});
+background-image:${({ darkMode }) =>darkMode?`url(${DarkTheme.BgImg})`:`url(${LightTheme.BgImg})`};
 height:40vh ;
 justify-content: center;
 

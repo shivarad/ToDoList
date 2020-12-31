@@ -1,7 +1,12 @@
 import {TabBarContainer,TabBtn,MiddleBtnsContainer} from './tabBarStyles';
+import {useContext} from 'react';
+import {ThemeContext} from '../../providers/theme/theme-provider';
 
-const TabBar=()=>(
-    <TabBarContainer>
+const TabBar=()=>{
+    const {darkMode}=useContext(ThemeContext);
+
+    return(
+    <TabBarContainer darkMode={darkMode}>
         <TabBtn>3 items left</TabBtn>
         <MiddleBtnsContainer>
             <TabBtn>All</TabBtn>
@@ -10,7 +15,7 @@ const TabBar=()=>(
         </MiddleBtnsContainer>
         <TabBtn>Clear Completed</TabBtn>
     </TabBarContainer>    
-)
+)}
 
 
 export default TabBar;

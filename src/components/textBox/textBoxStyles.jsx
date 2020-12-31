@@ -1,4 +1,6 @@
 import style from 'styled-components';
+import {LightTheme,DarkTheme} from '../../asset/styles/theme';
+
 
 export const TextBoxContainer=style.span`
 width: 50vw;
@@ -8,8 +10,8 @@ margin-top: -30px;
 
 `;
 
-export const TextInput=style.input.attrs({placeholder:'Create a todo...'})`
-width: 100%;
+export const TextInput=style.input.attrs({placeholder:'Create a todo...',type:"text"})`
+    width: 100%;
     height: 40px;
     border-radius: 5px;
     border: none;
@@ -18,6 +20,8 @@ width: 100%;
     font-family: 'Josefin Sans';
     font-size: 18px;
     padding-left:45px;
+    background-color:${({ darkMode }) => darkMode?DarkTheme.ItemBackground:LightTheme.ItemBackground};
+    color: ${({ darkMode }) => darkMode?DarkTheme.ItemTextColor:LightTheme.ItemTextColor};
 `;
 
 export const Circle=style.input.attrs({type:"radio" ,disabled:'disabled'})`
@@ -25,8 +29,8 @@ export const Circle=style.input.attrs({type:"radio" ,disabled:'disabled'})`
 -moz-appearance: none;
 appearance: none;
 background-clip: content-box;
-border: 1px solid #e7e6e7 ;
-background-color :white;
+border: 1px solid ${({ darkMode }) => darkMode?DarkTheme.BorderColor:LightTheme.BorderColor};
+background-color:${({ darkMode }) => darkMode?DarkTheme.ItemBackground:LightTheme.ItemBackground};
 border-radius: 50%;
 height: 20px;
 width: 20px;

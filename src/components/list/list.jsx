@@ -7,12 +7,7 @@ const List=({items})=>(
         <Item>
 
         </Item>
-        <Item>
-
-        </Item>
-        <Item>
-
-        </Item>
+        
         <TabBar></TabBar>
     </ListContainer>
 )
