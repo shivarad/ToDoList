@@ -1,5 +1,4 @@
 import style from 'styled-components';
-import {LightTheme,DarkTheme} from '../../asset/styles/theme';
 
 
 export const TextBoxContainer=style.span`
@@ -20,8 +19,8 @@ export const TextInput=style.input.attrs({placeholder:'Create a todo...',type:"t
     font-family: 'Josefin Sans';
     font-size: 18px;
     padding-left:45px;
-    background-color:${({ darkMode }) => darkMode?DarkTheme.ItemBackground:LightTheme.ItemBackground};
-    color: ${({ darkMode }) => darkMode?DarkTheme.ItemTextColor:LightTheme.ItemTextColor};
+    background-color:${props => props.theme.ItemBackground};
+    color: ${props=> props.theme.ItemTextColor};
 `;
 
 export const Circle=style.input.attrs({type:"radio" ,disabled:'disabled'})`
@@ -29,8 +28,8 @@ export const Circle=style.input.attrs({type:"radio" ,disabled:'disabled'})`
 -moz-appearance: none;
 appearance: none;
 background-clip: content-box;
-border: 1px solid ${({ darkMode }) => darkMode?DarkTheme.BorderColor:LightTheme.BorderColor};
-background-color:${({ darkMode }) => darkMode?DarkTheme.ItemBackground:LightTheme.ItemBackground};
+border: 1px solid ${props => props.theme.BorderColor};
+background-color:${props => props.theme.ItemBackground};
 border-radius: 50%;
 height: 20px;
 width: 20px;

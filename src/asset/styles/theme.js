@@ -12,7 +12,6 @@ export const LightTheme = {
     ItemTextColor: 'hsl(235, 19%, 35%)',
     BgImg:LightBg,
     ModeIcon:moonIcon,
-    Checkmark:'white',
 }
   
   export const DarkTheme = {
@@ -25,5 +24,6 @@ export const LightTheme = {
     //VeryDarkGrayishBlue: 'hsl(237, 14%, 26%)',
     BgImg:DarkBg,
     ModeIcon:sunIcon,
+
   }
   

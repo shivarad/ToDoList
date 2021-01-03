@@ -5,10 +5,9 @@ import {HeaderContainer,CenterWrapper,ModeContainer,HeaderTxt} from './headerSty
 import {ThemeContext} from '../../providers/theme/theme-provider';
 
 const Header=()=>{
-   const {toggleTheme,darkMode}=useContext(ThemeContext);
-
+   const {toggleTheme,theme}=useContext(ThemeContext);
    return(
-   <HeaderContainer darkMode={darkMode}>
+   <HeaderContainer theme={theme}>
        <CenterWrapper>
          <ModeContainer>
             <HeaderTxt>T O D O</HeaderTxt>

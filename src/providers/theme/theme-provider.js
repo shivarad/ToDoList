@@ -1,5 +1,6 @@
 import  { createContext, useState } from 'react';
 import { LightTheme,DarkTheme } from '../../asset/styles/theme';
+import { ThemeProvider } from 'styled-components';
 
 
 export const ThemeContext=createContext({
@@ -9,8 +10,7 @@ export const ThemeContext=createContext({
 
 const MyThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(LightTheme);
-  const[darkMode,setDarkMode]=useState(false);
-  const toggleTheme =()=> {setTheme(theme===LightTheme?DarkTheme:LightTheme);setDarkMode(!darkMode)}
+  const toggleTheme =()=> {setTheme(theme===LightTheme?DarkTheme:LightTheme)}
   
 
   return (
@@ -18,10 +18,11 @@ const MyThemeProvider = ({ children }) => {
       value={{
         theme,
         toggleTheme,
-        darkMode
       }}
     >
+      <ThemeProvider theme={theme}>
       {children}
+      </ThemeProvider>
     </ThemeContext.Provider>
   );
 };

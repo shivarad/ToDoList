@@ -1,10 +1,9 @@
 import style from 'styled-components';
-import {LightTheme,DarkTheme} from '../../asset/styles/theme';
 
 export const HeaderContainer =style.div`
 
 display: flex;
-background-image:${({ darkMode }) =>darkMode?`url(${DarkTheme.BgImg})`:`url(${LightTheme.BgImg})`};
+background-image:${props=>`url(${props.theme.BgImg})`};
 height:40vh ;
 justify-content: center;
 

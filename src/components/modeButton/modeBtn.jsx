@@ -1,14 +1,12 @@
+import {ModeBtnContainer,ModeIcon} from './modeButtonStyles';
 import {useContext} from 'react';
-import {ModeBtnContainer} from './modeButtonStyles';
 import {ThemeContext} from '../../providers/theme/theme-provider';
-import {LightTheme,DarkTheme} from '../../asset/styles/theme';
 
 const ModeBtn=({...props})=>{
-    const {darkMode}=useContext(ThemeContext);
-    
+    const {theme}=useContext(ThemeContext);
 return(
         <ModeBtnContainer  {...props} >
-            <img src={darkMode? DarkTheme.ModeIcon:LightTheme.ModeIcon} alt="mode icon"/>
+            <ModeIcon src={theme.ModeIcon}/>
         </ModeBtnContainer>
 )}
 

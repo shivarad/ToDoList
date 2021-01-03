@@ -6,6 +6,5 @@ background-color: transparent;
     outline: none !important;
 `;
 
-export const ModeIcon=style.img`
-
+export const ModeIcon=style.img.attrs({alt:"mode icon"})`
 `;

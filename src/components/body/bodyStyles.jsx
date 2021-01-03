@@ -1,9 +1,8 @@
 
  import style from 'styled-components';
-import {LightTheme,DarkTheme} from '../../asset/styles/theme';
 
  export const BodyContainer=style.div`
- background-color: ${({ darkMode }) =>darkMode?DarkTheme.BodyColor:LightTheme.BodyColor};
+ background-color: ${props=>props.theme.BodyColor};
  height: 60vh; 
  `;
 

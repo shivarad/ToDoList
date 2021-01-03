@@ -1,10 +1,9 @@
 import style from 'styled-components';
-import {LightTheme,DarkTheme} from '../../asset/styles/theme';
 
 export const TabBarContainer=style.div`
 padding:0 10px ;
     height: 40px;
-    background-color:${({ darkMode }) => darkMode?DarkTheme.ItemBackground:LightTheme.ItemBackground};
+    background-color:${props => props.theme.ItemBackground};
     font-family: 'Josefin Sans';
     font-size: 18px;
     display: flex;
