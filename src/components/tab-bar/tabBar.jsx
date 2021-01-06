@@ -1,11 +1,11 @@
 import {TabBarContainer,TabBtn,MiddleBtnsContainer} from './tabBarStyles';
 
 
-const TabBar=()=>{
+const TabBar=({lenght})=>{
 
     return(
     <TabBarContainer >
-        <TabBtn>3 items left</TabBtn>
+        <TabBtn>{lenght} items left</TabBtn>
         <MiddleBtnsContainer>
             <TabBtn>All</TabBtn>
             <TabBtn >Active</TabBtn>
