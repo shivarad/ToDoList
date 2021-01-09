@@ -1,7 +1,7 @@
 import LightBg from '../images/bg-desktop-light.jpg';
 import DarkBg from '../images/bg-desktop-dark.jpg';
 import sunIcon from "../images/icon-sun.svg";
-import moonIcon from "../images/icon-moon.svg";
+import moonIcon from '../images/icon-moon.svg'
 
 export const LightTheme = {
     BodyColor: 'hsl(0, 0%, 98%)',

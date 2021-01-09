@@ -1,6 +1,6 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const HeaderContainer =style.div`
+export const HeaderContainer =styled.div`
 
 display: flex;
 background-image:${props=>`url(${props.theme.BgImg})`};
@@ -9,21 +9,21 @@ justify-content: center;
 
 `;
 
-export const CenterWrapper=style.div`
+export const CenterWrapper=styled.div`
      display: flex;
      flex-direction: column;
      width: 50vw;
      justify-content: center;
 `;
 
-export const ModeContainer=style.div`
+export const ModeContainer=styled.div`
 width: 50vw;
 height: fit-content;
 display: flex;
 justify-content: space-between;
 `;
 
-export const HeaderTxt=style.h2`
+export const HeaderTxt=styled.h2`
 color: white;
     font-family: 'Josefin Sans';
     font-weight: 700;

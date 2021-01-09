@@ -1,6 +1,6 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const ListContainer=style.div`
+export const ListContainer=styled.div`
 display: flex;
 flex-direction: column;
 width: 50vw;

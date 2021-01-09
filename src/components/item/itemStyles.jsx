@@ -1,6 +1,6 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const RemoveBtn=style.button`
+export const RemoveBtn=styled.button`
 background: none;
 outline: none;
 border: none;
@@ -12,7 +12,7 @@ display: none;
 color:${props => props.theme.BorderColor};
 `;
 
-export const ItemContainer=style.div`
+export const ItemContainer=styled.div`
 height: 40px;
 background-color:${props =>props.theme.ItemBackground};
 border-bottom: 1px solid ${props => props.theme.BorderColor};
@@ -28,12 +28,15 @@ color: ${props => props.theme.ItemTextColor};
     }
 `;
 
-export const ItemLabel=style.label`
+export const ItemLabel=styled.label`
 cursor: pointer;
 border:none;
+&.done{
+    text-decoration:line-through;
+}
 `;
 
-export const CircularCheckBox=style.input.attrs({type:'checkbox'})`
+export const CircularCheckBox=styled.input.attrs({type:'checkbox'})`
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
@@ -56,7 +59,7 @@ margin-left: 15px;
 
 
 
-export const SVGCheckmark=style.svg`
+export const SVGCheckmark=styled.svg`
 fill:${props => props.theme.ItemBackground};
 position: relative;
 left: -21px;

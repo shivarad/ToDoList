@@ -1,7 +1,7 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
 
-export const TextBoxContainer=style.span`
+export const TextBoxContainer=styled.span`
 width: 50vw;
 height: fit-content;
 padding: 0;
@@ -9,7 +9,7 @@ margin-top: -30px;
 
 `;
 
-export const TextInput=style.input.attrs({placeholder:'Create a todo...',type:"text"})`
+export const TextInput=styled.input.attrs({placeholder:'Create a todo...',type:"text"})`
     width: 100%;
     height: 40px;
     border-radius: 5px;
@@ -23,7 +23,7 @@ export const TextInput=style.input.attrs({placeholder:'Create a todo...',type:"t
     color: ${props=> props.theme.ItemTextColor};
 `;
 
-export const Circle=style.input.attrs({type:"radio" ,disabled:'disabled'})`
+export const Circle=styled.input.attrs({type:"radio" ,disabled:'disabled'})`
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;

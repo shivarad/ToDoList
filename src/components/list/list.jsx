@@ -12,12 +12,12 @@ const List=({tasks})=>(
         :
         console.log('no task')
        } 
-        <TabBar lenght={tasks.length?tasks.length:0}/>
+        <TabBar />
     </ListContainer>
 )
 const mapStateToProps=state=>({
    
-    tasks:state.tasks
+    tasks:state.filteredTasks
 })
 
 export default connect(mapStateToProps,null)(List);

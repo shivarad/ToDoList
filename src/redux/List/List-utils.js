@@ -7,3 +7,14 @@ export const ToggleTask=(tasks,id)=>{
      [...tasks]
 }
 
+export const FilterTasks=(tasks,filterType)=>{ //all:2 complete:0 active:1
+
+  switch(filterType){
+    case(0):
+      return tasks.filter(task=>task.isDone);
+    case(1):
+      return tasks.filter(task=>!task.isDone);
+    default:
+      return tasks
+}
+}
