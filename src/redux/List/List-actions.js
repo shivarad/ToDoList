@@ -20,7 +20,7 @@ export const ClearCompelete=()=>({
     type:ListActionTypes.CLEAR_COMPLETE
 });
 
-export const FilterTasks=(filterType)=>({
+export const FilterTasks=(visibilityFilter)=>({
     type:ListActionTypes.FILTER_TASKS,
-    payload:filterType
+    payload:visibilityFilter
 })

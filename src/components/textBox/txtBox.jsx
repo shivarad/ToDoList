@@ -5,9 +5,11 @@ import {AddTask} from '../../redux/List/List-actions'
 const TextBox =({addTask})=>{
     
     const handleKey=(e)=>{
-        if (e.key === "Enter")
+        if (e.key === "Enter"){
             addTask(e.target.value)
+            e.target.value='';
         }
+    }
    
     return(
     <TextBoxContainer >

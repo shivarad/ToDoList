@@ -24,7 +24,6 @@ cursor:pointer;
 }
 `;
 export const MiddleTabBtn=styled(RightTabBtn)`
-
 &.active{
     color: hsl(220, 98%, 61%);
 }

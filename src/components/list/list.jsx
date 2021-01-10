@@ -2,7 +2,8 @@ import Item from '../item/item';
 import TabBar from '../tab-bar/tabBar'
 import {ListContainer} from './listStyles';
 import {connect} from 'react-redux';
-
+import {createStructuredSelector} from 'reselect';
+import {selectVisibleTasks} from '../../redux/List/List-selectors';
 const List=({tasks})=>(
    
     <ListContainer className='list'>
@@ -15,9 +16,9 @@ const List=({tasks})=>(
         <TabBar />
     </ListContainer>
 )
-const mapStateToProps=state=>({
-   
-    tasks:state.filteredTasks
-})
+const mapStateToProps= createStructuredSelector({
+  
+    tasks:selectVisibleTasks
+});
 
 export default connect(mapStateToProps,null)(List);
