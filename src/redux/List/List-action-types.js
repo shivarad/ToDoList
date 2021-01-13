@@ -4,6 +4,7 @@ const ListActionTypes={
     REMOVE_TASK:'REMOVE_TASK',
     CLEAR_COMPLETE:'CLEAR_COMPLETE',
     FILTER_TASKS:'FILTER_TASKS',
+    MOVE_TASK:'MOVE_TASK'
     
 }
 

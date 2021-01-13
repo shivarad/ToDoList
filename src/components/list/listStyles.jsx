@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const ListContainer=styled.div`
 display: flex;
 flex-direction: column;
+
+`;
+export const Wrapper=styled.div`
+display: flex;
+flex-direction: column;
 width: 50vw;
 height: fit-content;
 justify-content: center;

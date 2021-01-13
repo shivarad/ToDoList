@@ -24,3 +24,8 @@ export const FilterTasks=(visibilityFilter)=>({
     type:ListActionTypes.FILTER_TASKS,
     payload:visibilityFilter
 })
+
+export const MoveTask=(reorderedTasks)=>({
+    type:ListActionTypes.MOVE_TASK,
+    payload:reorderedTasks
+})

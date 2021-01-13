@@ -42,6 +42,10 @@ const ListReducer=(state=INITIAL_STATE,action)=>{
                 ...state,
                 visibilityFilter:action.payload
             }
+        case(ListActionTypes.MOVE_TASK):
+            return{
+                ...state,tasks:[...action.payload]
+            }
         default:
             return state;
     }

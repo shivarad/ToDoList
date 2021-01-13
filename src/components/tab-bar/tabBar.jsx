@@ -1,5 +1,7 @@
 import {TabBarContainer,LeftTabBtn,MiddleBtnsContainer,MiddleTabBtn,RightTabBtn} from './tabBarStyles';
 import {connect} from 'react-redux';
+import {createStructuredSelector} from 'reselect';
+import {getTasks,getVisibilityFilter} from '../../redux/List/List-selectors';
 import {FilterTasks,ClearCompelete} from '../../redux/List/List-actions';
 
 const TabBar=({tasks,FilterTasks,visibilityFilter,ClearCompelete})=>{
@@ -16,9 +18,9 @@ const TabBar=({tasks,FilterTasks,visibilityFilter,ClearCompelete})=>{
     </TabBarContainer>    
 )}
 
-const mapStateToProps=state=>({
-    tasks:state.tasks,
-    visibilityFilter:state.visibilityFilter
+const mapStateToProps=createStructuredSelector({
+    tasks:getTasks,
+    visibilityFilter:getVisibilityFilter
 })
 const mapDispatchToProps=dispatch=>({
     FilterTasks:(visibilityFilter)=>dispatch(FilterTasks(visibilityFilter)),
