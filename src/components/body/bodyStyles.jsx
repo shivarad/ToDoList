@@ -11,6 +11,9 @@
  margin: 0 auto;
  width: 50%;
  font-size:12px;
- padding-top: 30px;
+ margin-top: 30px;
  text-align: center;
+ @media screen and (max-width: 375px) {
+     margin-top:60px;
+ }
  `;

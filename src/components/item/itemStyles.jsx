@@ -13,13 +13,14 @@ color:${props => props.theme.BorderColor};
 `;
 
 export const ItemContainer=styled.div`
-height: 40px;
+height: 8vh;
 background-color:${props =>props.theme.ItemBackground};
 border-bottom: 1px solid ${props => props.theme.BorderColor};
 font-family: 'Josefin Sans';
 font-size: 18px;
 display: flex;
 justify-content: space-between;
+align-items:center;
 color: ${props => props.theme.ItemTextColor};
     &:first-child{
       border-radius: 5px 5px 0 0 }
@@ -31,6 +32,8 @@ color: ${props => props.theme.ItemTextColor};
 export const ItemLabel=styled.label`
 cursor: pointer;
 border:none;
+display:flex;
+align-items:center;
 &.done{
     text-decoration:line-through;
 }
@@ -46,8 +49,6 @@ background-color:${props => props.theme.ItemBackground};
 border-radius: 50%;
 height: 20px;
 width: 20px;
-position: relative;
-top:20%;
 cursor: pointer;
 margin-left: 15px;
         &:checked {
@@ -63,5 +64,4 @@ export const SVGCheckmark=styled.svg`
 fill:${props => props.theme.ItemBackground};
 position: relative;
 left: -21px;
-top:3px;
 `;
