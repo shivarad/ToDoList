@@ -32,3 +32,6 @@ Your users should be able to:
 - react-beautiful-dnd
 - react-redux
 - styled-components
+
+## Medium Tutorial on Creating Dark mode: 
+    (https://shiva-rrad.medium.com/how-to-create-dark-mode-in-react-using-styled-components-and-hooks-61c5266a1523)
