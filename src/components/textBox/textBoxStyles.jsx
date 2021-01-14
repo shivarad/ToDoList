@@ -8,6 +8,9 @@ margin:0;
 align-items:center;
 position:relative;
 top:-20px;
+@media screen and (max-width: 375px) {
+    width: 90vw;
+  }
 `;
 
 export const TextInput=styled.input.attrs({placeholder:'Create a todo...',type:"text"})`
