@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const TabBarContainer=styled.div`
     padding:0 10px ;
-    height: 8vh;
+    height: 50px;
     background-color:${props => props.theme.ItemBackground};
     font-family: 'Josefin Sans';
     font-size: 18px;
@@ -48,7 +48,7 @@ display: flex;
 justify-content: center;
 @media screen and (max-width: 375px) {
     padding:0 10px ;
-    height: 8vh;
+    height: 50px;
     width:100%;
     border-radius: 10px;
     box-shadow:  0px 35px 50px -15px rgba(194,195,214,0.5);

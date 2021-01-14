@@ -13,7 +13,7 @@ color:${props => props.theme.BorderColor};
 `;
 
 export const ItemContainer=styled.div`
-height: 8vh;
+height: 50px;
 background-color:${props =>props.theme.ItemBackground};
 border-bottom: 1px solid ${props => props.theme.BorderColor};
 font-family: 'Josefin Sans';

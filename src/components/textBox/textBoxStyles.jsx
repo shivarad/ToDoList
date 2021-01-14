@@ -15,7 +15,7 @@ top:-20px;
 
 export const TextInput=styled.input.attrs({placeholder:'Create a todo...',type:"text"})`
     width: 100%;
-    height: 8vh;
+    height: 50px;
     border-radius: 5px;
     border: none;
     outline: none !important;  
@@ -38,6 +38,6 @@ border-radius: 50%;
 height: 20px;
 width: 20px;
 position:relative;
-top:44px;
+top:40px;
 left:10px;
 `;
