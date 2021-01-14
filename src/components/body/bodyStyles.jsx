@@ -3,7 +3,7 @@
 
  export const BodyContainer=styled.div`
  background-color: ${props=>props.theme.BodyColor};
- height: 60vh; 
+ height: 63vh; 
  `;
 
  export const InfoTxt=styled.div`
@@ -14,6 +14,6 @@
  margin-top: 30px;
  text-align: center;
  @media screen and (max-width: 375px) {
-     margin-top:60px;
+     margin-top:12vh;
  }
  `;

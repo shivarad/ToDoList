@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 
-export const TextBoxContainer=styled.span`
-width: 40vw;
-height: fit-content;
+export const TextBoxContainer=styled.div`
+max-width:500px;
 padding: 0;
+margin:0;
 align-items:center;
-@media screen and (max-width: 375px) {
-    width: 90vw;
-  }
+position:relative;
+top:-20px;
 `;
 
 export const TextInput=styled.input.attrs({placeholder:'Create a todo...',type:"text"})`
@@ -22,6 +21,7 @@ export const TextInput=styled.input.attrs({placeholder:'Create a todo...',type:"
     padding-left:45px;
     background-color:${props => props.theme.ItemBackground};
     color: ${props=> props.theme.ItemTextColor};
+
 `;
 
 export const Circle=styled.input.attrs({type:"radio" ,disabled:'disabled'})`
@@ -35,6 +35,6 @@ border-radius: 50%;
 height: 20px;
 width: 20px;
 position:relative;
-top:40px;
+top:44px;
 left:10px;
 `;

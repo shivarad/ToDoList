@@ -4,8 +4,7 @@ const Body=()=>{
     
     return(
     <BodyContainer >
-        
-            <List />
+        <List />
         <InfoTxt>Drag and drop to reorder list</InfoTxt>
     </BodyContainer>
  )

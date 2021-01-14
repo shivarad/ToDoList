@@ -17,7 +17,7 @@ height: 8vh;
 background-color:${props =>props.theme.ItemBackground};
 border-bottom: 1px solid ${props => props.theme.BorderColor};
 font-family: 'Josefin Sans';
-font-size: 18px;
+font-size:18px;
 display: flex;
 justify-content: space-between;
 align-items:center;

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const ModeBtnContainer=styled.button`
-background-color: transparent;
+    background-color: transparent;
     border: none;
     outline: none !important;
+    
 `;
 
  export const ModeIcon=styled.img.attrs(props => ({
