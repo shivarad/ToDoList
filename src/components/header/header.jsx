@@ -11,7 +11,7 @@ const Header=()=>{
        <CenterWrapper>
          <ModeContainer>
             <HeaderTxt>T O D O</HeaderTxt>
-            <ModeBtn onClick={toggleTheme}/>
+            <ModeBtn name='toggle-theme-button'onClick={toggleTheme}/>
          </ModeContainer>
          <TextBox />
        </CenterWrapper>
