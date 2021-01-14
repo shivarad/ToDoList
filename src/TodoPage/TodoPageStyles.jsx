@@ -33,6 +33,7 @@ export const InfoTxt=styled.div`
  margin-top: 30px;
  text-align: center;
  @media screen and (max-width: 375px) {
-     margin-top:12vh;
+  margin-top: 120px;
+
  }
  `;
