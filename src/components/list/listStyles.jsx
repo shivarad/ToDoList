@@ -12,8 +12,6 @@ justify-content: center;
 margin: 0 auto;
 max-width:500px;
 height: fit-content;
-position: relative;
-top:-6vh;
 border-radius: 10px;
 box-shadow:  0px 35px 50px -15px rgba(194,195,214,0.5);
 @media screen and (max-width: 375px) {

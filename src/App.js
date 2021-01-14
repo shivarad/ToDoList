@@ -1,14 +1,10 @@
 import React, { Fragment  } from 'react';
-import Header from './components/header/header';
-import Body from './components/body/body';
-
+import TodoPage from './TodoPage/TodoPage';
 
  const App=()=> {
    return(
       <Fragment>
-        
-          <Header />
-          <Body/>
+        <TodoPage/>
       </Fragment>
   )};
 
