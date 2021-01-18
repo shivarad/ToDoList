@@ -1,3 +1,5 @@
+import uuid from 'react-uuid';
+
 export const ToggleTask=(tasks,id)=>{
 
     const task=tasks.find(task=>task.id===id);
@@ -7,3 +9,6 @@ export const ToggleTask=(tasks,id)=>{
      [...tasks]
 }
 
+export const AddTask=(tasks,text)=>{
+  return (text!=='')? [{text:text,isDone:false,id:uuid()},...tasks]:tasks
+}

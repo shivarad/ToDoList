@@ -27,7 +27,7 @@ export const TextInput=styled.input.attrs({placeholder:'Create a todo...',type:"
 
 `;
 
-export const Circle=styled.input.attrs({type:"radio" ,disabled:'disabled'})`
+export const Circle=styled.input.attrs({type:"radio" ,disabled:'disabled',name:"taskInput"})`
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;

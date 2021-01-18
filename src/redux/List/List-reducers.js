@@ -1,6 +1,6 @@
 import ListActionTypes from './List-action-types';
 import uuid from 'react-uuid';
-import {ToggleTask} from './List-utils';
+import {ToggleTask,AddTask} from './List-utils';
 
 const INITIAL_STATE={
     tasks:[
@@ -18,7 +18,7 @@ const ListReducer=(state=INITIAL_STATE,action)=>{
         case(ListActionTypes.ADD_TASK):
             return {
                 ...state,
-                tasks:[...state.tasks,{text:action.payload,isDone:false,id:uuid()}],
+                tasks: AddTask(state.tasks,action.payload),
                 visibilityFilter:2
             }
         case (ListActionTypes.REMOVE_TASK):
