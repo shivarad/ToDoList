@@ -7,6 +7,10 @@ const Item=({task,ToggleTask,RemoveTask,index})=>{
     const handleChecked=()=>{
     ToggleTask(task.id);
     }
+    const handleClick=(e)=>{
+        e.preventDefault();
+        RemoveTask(task.id);
+    }
 
     return( 
         <Draggable draggableId={task.id} index={index} >
@@ -23,7 +27,7 @@ const Item=({task,ToggleTask,RemoveTask,index})=>{
                         </SVGCheckmark>
                         {task.text}
                     </ItemLabel>
-                    <RemoveBtn className='removeBtn' onClick={()=>RemoveTask(task.id)}>&#x2715;</RemoveBtn>
+                    <RemoveBtn className='removeBtn' onClick={(e)=>handleClick(e)}>&#x2715;</RemoveBtn>
 
                 </ItemContainer>
             )}
