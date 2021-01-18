@@ -20,6 +20,7 @@
 ## Used Libraries
 - react-beautiful-dnd
 - react-redux
+-react-router-dom
 - styled-components
 
 ## Medium Tutorial on Creating Dark mode: 

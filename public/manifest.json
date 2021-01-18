@@ -1,19 +1,21 @@
+
+
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Todo-App",
+  "name": "Todo List App",
   "icons": [
     {
-      "src": "todo.ico",
+      "src": "icons/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "todo-logo.png",
+      "src": "icons/todo-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "todo-logo.png",
+      "src": "icons/todo-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -23,3 +25,5 @@
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
+
+
