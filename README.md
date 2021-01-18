@@ -4,6 +4,10 @@
 
 [Frontend Mentor](https://www.frontendmentor.io)
 [Challenge](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW)
+
+###Extra Features added by me:
+- PWA
+
 ##
 [Rate My Solution](https://www.frontendmentor.io/solutions/todo-react-app-with-redux-and-dark-mode-using-hooks-and-styled-components-MbM-Ns2E9)
 
