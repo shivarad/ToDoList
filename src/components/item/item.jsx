@@ -4,8 +4,7 @@ import {ToggleTask,RemoveTask} from '../../redux/List/List-actions'
 import {Draggable} from 'react-beautiful-dnd';
 const Item=({task,ToggleTask,RemoveTask,index})=>{
 
-    const handleChecked=(e)=>{
-        e.preventDefault();
+    const handleChecked=()=>{
     ToggleTask(task.id);
     }
 
@@ -18,7 +17,7 @@ const Item=({task,ToggleTask,RemoveTask,index})=>{
                     {...provided.dragHandleProps}
                     >
                     <ItemLabel className={task.isDone?'done':''}>
-                        <CircularCheckBox name={task.id} checked={task.isDone} onChange={(e)=>handleChecked(e)}/>
+                        <CircularCheckBox name={task.id} checked={task.isDone} onChange={()=>handleChecked()}/>
                         <SVGCheckmark aria-hidden="true"  width="16" height="16" viewBox="0 0 36 36" >
                             <path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"></path>
                         </SVGCheckmark>
