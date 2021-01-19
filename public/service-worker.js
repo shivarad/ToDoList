@@ -1,7 +1,10 @@
-var CACHE_NAME = 'todo-list-app';
+
+var CACHE_NAME = 'todo-list-cache-v1';
 var urlsToCache = [
-  '/',
-  '/completed'
+    './',
+    './index.html',
+    './todo.png',
+    './manifest.webmanifest'
 ];
 
 // Install a service worker
