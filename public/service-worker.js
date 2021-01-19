@@ -1,48 +1,48 @@
-const cacheName = "cache-v1";
-const staticAssets = [
-    './',
-    './index.html',
-    './todo.png',
-    './manifest.webmanifest'
-]
+var CACHE_NAME = 'todo-list-app';
+var urlsToCache = [
+  '/',
+  '/completed'
+];
 
-self.addEventListener('install', async event => {
-    const cache = await caches.open(cacheName);
-    await cache.addAll(staticAssets);
-    return self.skipWaiting();
+// Install a service worker
+self.addEventListener('install', event => {
+  // Perform install steps
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+  );
 });
 
+// Cache and return requests
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+
+// Update a service worker
 self.addEventListener('activate', event => {
-    self.clients.claim();
+  var cacheWhitelist = ['pwa-task-manager'];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
 });
-
-self.addEventListener('fetch', async event => {
-
-    const req = event.request;
-    
-    const url = new URL(req.url);
-
-    if (url.origin === location.origin) {
-        event.respondWith(cacheFirst(req));
-    } else {
-        event.respondWith(networkAndCache(req));
-    }
-});
-
-async function cacheFirst(req) {
-    const cache = await caches.open(cacheName);
-    const cached = await cache.match(req);
-    return cached || fetch(req);
-}
-
-async function networkAndCache(req) {
-    const cache = await caches.open(cacheName);
-    try {
-        const fresh = await fetch(req);
-        await cache.put(req, fresh.clone());
-        return fresh;
-    } catch (error) {
-        const cached = await cache.match(req);
-        return cached;
-    }
-}
