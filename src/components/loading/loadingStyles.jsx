@@ -6,7 +6,8 @@ const Loading=keyframes`
 100% { height: 20px; transform: scaleY(); background-color: #9B59B6; }` 
 
 export const Container=styled.div`
-width: 164px;
+    top:20vh;
+    width: 164px;
     height: 120px;
     position: relative;
     margin: 0 auto;

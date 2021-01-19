@@ -4,9 +4,9 @@ import {ToggleTask,AddTask} from './List-utils';
 
 const INITIAL_STATE={
     tasks:[
-        {text:"task1",isDone:true,id:uuid()},
-        {text:"task2",isDone:true,id:uuid()},
-        {text:"task3",isDone:false,id:uuid()}
+        // {text:"task1",isDone:true,id:uuid()},
+        // {text:"task2",isDone:true,id:uuid()},
+        // {text:"task3",isDone:false,id:uuid()}
     ],
     
     visibilityFilter:2, //all:2 complete:0 active:1
