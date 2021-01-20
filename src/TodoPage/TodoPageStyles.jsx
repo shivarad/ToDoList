@@ -9,6 +9,8 @@ height:100vh;
 export const BackGroundImage=styled.div`
 height:37vh;
 background-image:${props=>`url(${props.theme.BgImg})`};
+background-size:100% 100%;
+background-repeat:no-repeat;
 @media screen and (max-width: 375px) {
 background-image:${props=>`url(${props.theme.BgImgMobile})`};
 z-index:-1;
