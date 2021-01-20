@@ -6,11 +6,11 @@ import ListReducer from '../redux/List/List-reducers';
 const persistConfig={
     key:'root',
     storage,
-    whitelist:['tasks']
+    whitelist:['List']
 }
 export const rootReducer=combineReducers({
     
-    tasks:ListReducer,
+    List:ListReducer,
     
 })
 

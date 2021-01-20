@@ -3,16 +3,13 @@ import ListActionTypes from './List-action-types';
 import {ToggleTask,AddTask} from './List-utils';
 
 const INITIAL_STATE={
-    tasks:[
-        // {text:"task1",isDone:true,id:uuid()},
-        // {text:"task2",isDone:true,id:uuid()},
-        // {text:"task3",isDone:false,id:uuid()}
-    ],
-    
+    tasks:[],
     visibilityFilter:2, //all:2 complete:0 active:1
     }
 
-
+// {text:"task1",isDone:true,id:uuid()},
+        // {text:"task2",isDone:true,id:uuid()},
+        // {text:"task3",isDone:false,id:uuid()}
 const ListReducer=(state=INITIAL_STATE,action)=>{
     switch(action.type){
         case(ListActionTypes.ADD_TASK):
@@ -24,12 +21,12 @@ const ListReducer=(state=INITIAL_STATE,action)=>{
         case (ListActionTypes.REMOVE_TASK):
             return{
                 ...state,
-                tasks:state.tasks.filter(task=>task.id!==action.payload),
+                tasks:state.tasks.filter(task=>task.id!==action.payload)
             }
         case(ListActionTypes.TOGGLE_TASK):
             return{
                 ...state,
-                tasks:ToggleTask(state.tasks,action.payload),
+                tasks:ToggleTask(state.tasks,action.payload)
             }
         case(ListActionTypes.CLEAR_COMPLETE):
             return{

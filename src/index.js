@@ -5,24 +5,24 @@ import reportWebVitals from './reportWebVitals';
 import MyThemeProvider from './providers/theme/theme-provider'
 import {GlobalStyles} from './asset/styles/global';
 import { Provider } from 'react-redux';
-// import {store,persistor} from './redux/store';
-// import {PersistGate} from 'redux-persist/integration/react';
-import {createStore , applyMiddleware} from 'redux';
-import logger from 'redux-logger';
-import ListReducer from './redux/List/List-reducers';
+import {store,persistor} from './redux/store';
+import {PersistGate} from 'redux-persist/integration/react';
+// import {createStore , applyMiddleware} from 'redux';
+// import logger from 'redux-logger';
+// import ListReducer from './redux/List/List-reducers';
 import * as serviceWorker from './serviceWorker';
 
 
-const middlewares=[logger];
-export const store =createStore(ListReducer, applyMiddleware(...middlewares));
+//const middlewares=[logger];
+//export const store =createStore(ListReducer, applyMiddleware(...middlewares));
 
 ReactDOM.render(
   <MyThemeProvider>
     <Provider store={store}>
-      {/* <PersistGate persistor={persistor}> */}
+      <PersistGate persistor={persistor}> 
     <GlobalStyles/>
     <App />
-    {/* </PersistGate> */}
+    </PersistGate> 
     </Provider>
   </MyThemeProvider>,
   document.getElementById('root')
