@@ -8,10 +8,11 @@ const persistConfig={
     storage,
     whitelist:['tasks']
 }
-const rootReducer=combineReducers({
+export const rootReducer=combineReducers({
     
     tasks:ListReducer,
     
 })
 
 export default persistReducer(persistConfig,rootReducer);
+

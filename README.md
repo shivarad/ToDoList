@@ -13,7 +13,7 @@
 
 ### Live demo:
 
-[Todo app live](https://todolist-shivarad.netlify.app/)
+[Todo app live](https://to-do-list-rust.vercel.app/)
 
 
 ## Development
