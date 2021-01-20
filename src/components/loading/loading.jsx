@@ -8,6 +8,7 @@ const Loading=()=>(
     <Bars/>
     <Bars/>
     <Bars/>
+    <Bars/>
 </Container>
 
 )

@@ -7,7 +7,7 @@ const TodoPage=lazy(()=>import('./TodoPage/TodoPage'));
    return(
     <BrowserRouter>
     <Fragment>
-        <Suspense fallback={<div>loading...</div>}>
+        <Suspense fallback={<Loading/>}>
           <Route exact path="/" component={TodoPage}/>
         </Suspense>
       </Fragment>
